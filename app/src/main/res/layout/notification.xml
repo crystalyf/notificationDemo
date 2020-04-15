@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+            <tokyo.urbanlife.notificationdemo.util.notification.CircleImageView
+                android:id="@+id/iconIM"
+                android:layout_width="@dimen/notification_circle_view_width"
+                android:layout_height="@dimen/notification_circle_view_width"
+                android:paddingTop="@dimen/notification_circle_padding_top"
+                android:paddingStart="@dimen/notification_circle_padding_start"
+                android:paddingEnd="@dimen/notification_circle_padding_start"
+                android:paddingBottom="@dimen/notification_circle_padding_bottom" />
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/notification_textview_margin_end"
+                android:layout_marginTop="@dimen/notification_textview_margin_top"
+                android:layout_toStartOf="@+id/timeTV"
+                android:layout_toEndOf="@+id/iconIM"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/notification_title_text_size" />
+
+            <TextView
+                android:id="@+id/timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/titleTV"
+                android:paddingEnd="@dimen/notification_time_padding_end"
+                android:textColor="@color/gray" />
+
+
+            <TextView
+                android:id="@+id/messageTV"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleTV"
+                android:layout_marginEnd="@dimen/notification_textview_margin_end"
+                android:layout_toEndOf="@+id/iconIM"
+                android:maxLines="2"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/notification_text_size" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/notification_line_height"
+                android:layout_below="@+id/iconIM"
+                android:layout_marginTop="@dimen/notification_textview_margin_end"
+                android:layout_toEndOf="@+id/iconIM"
+                android:background="@color/gray"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/menuL"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/notification_menu_height"
+                android:layout_below="@+id/line"
+                android:layout_toEndOf="@+id/iconIM"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/menu1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_transparency_to_grey"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/menuIM1"
+                        android:layout_width="@dimen/notification_menu_height"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:padding="@dimen/notification_textview_margin_top"
+                        android:contentDescription="menuIM1"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:id="@+id/menuText1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:duplicateParentState="true"
+                        android:textSize="@dimen/notification_menu_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menu2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_transparency_to_grey"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/menuIM2"
+                        android:layout_width="@dimen/notification_menu_height"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:padding="@dimen/notification_textview_margin_top"
+                        android:contentDescription="menuIM2"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:id="@+id/menuText2"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:duplicateParentState="true"
+                        android:textSize="@dimen/notification_menu_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menu3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_transparency_to_grey"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/menuIM3"
+                        android:layout_width="@dimen/notification_menu_height"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:padding="@dimen/notification_textview_margin_top"
+                        android:contentDescription="menuIM3"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:id="@+id/menuText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:duplicateParentState="true"
+                        android:textSize="@dimen/notification_menu_text_size" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+</RelativeLayout>
